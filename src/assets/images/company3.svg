@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect rx="14" width="120" height="120" fill="#071229" />
+  <path d="M20 80 L60 36 L100 80 Z" fill="#7c5cff" />
+  <text x="60" y="90" text-anchor="middle" font-size="14" fill="#cfe7ff" font-family="Arial">Social Labs</text>
+</svg>

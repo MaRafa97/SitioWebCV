@@ -1,0 +1,50 @@
+:root{
+  --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c5cff; --accent-2:#00c2a8; --glass: rgba(255,255,255,0.04);
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,system-ui,Arial; margin:0; background:linear-gradient(180deg,#071029 0%, #071a2b 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+.container{max-width:var(--max-width); margin:0 auto; padding:28px}
+.site-header{backdrop-filter:blur(6px); border-bottom:1px solid rgba(255,255,255,0.03);}
+.header-grid{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:20px}
+.muted{color:var(--muted); font-size:14px}
+.actions{display:flex;gap:12px;align-items:center}
+.btn{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#061221; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--accent-2)}
+.btn.large{padding:12px 18px;font-size:16px}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+.hero{padding:48px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center}
+.hero-left h2{font-size:28px;margin:0 0 12px}
+.lead{color:#cfe7ff; font-size:16px}
+.cta-row{display:flex;gap:12px;margin:18px 0}
+.meta-list{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
+.avatar{width:160px;border-radius:14px;background:var(--glass);padding:10px}
+.summary-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:12px;border-radius:10px;margin-top:12px;color:var(--muted)}
+
+.about, .experience, .projects, .skills, .contact{padding:36px 0}
+.timeline{display:flex;flex-direction:column;gap:18px}
+.timeline-item{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,0.02);padding:14px;border-radius:12px}
+.timeline-item .logo{width:56px;height:56px;border-radius:8px;padding:10px;background:linear-gradient(90deg,#0b1220,#081226)}
+.item-content h4{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;background:transparent}
+
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03); text-align:center}
+
+/* Responsive */
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.avatar{width:120px}}
+
+/* Simple entrance animation */
+.timeline-item, .card{transform:translateY(6px);opacity:0;animation:enter .6s ease forwards}
+@keyframes enter{to{transform:none;opacity:1}}
+
+/* Utility */
+.muted a{color:inherit}
+
+/* Small tweaks for light theme */
+body.light{background:linear-gradient(180deg,#f7fbff,#eef6ff);color:#0b1220}
+body.light .btn{color:#fff}
