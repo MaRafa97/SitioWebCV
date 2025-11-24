@@ -1,0 +1,1 @@
+console.log("El profe Rafa te saluda desde su archivo rafa.js");
